@@ -1,0 +1,83 @@
+$sidebarColor: #f9fafc;
+$backgroundColor: white;
+$buttonColor: #0056fd;
+$textColor: #090909;
+$scrollBarColor: #999999;
+$inputColor: #ffffff;
+$placeHolderColor: #8e7a74;
+$borderColor: #555559;
+$hoverColor: #f2f0fd;
+$hoverColorSimple: #0047d4;
+$buttonBgMobile: #e8e9ed;
+$errorColor: #ff4d4d;
+$alertPrimary: #ccf2ff;
+$alertSecondary: #e2e3e3;
+$alertWarning: #ffff99;
+$alertError: #ffb3b3;
+$alertSuccess: #d6f5d6;
+//===================================
+$font-family: "Poppins", sans-serif;
+$light-green-color: #422afa;
+$white-color: #ffffff;
+$black-color: #0e314c;
+$navlink-color: #4a6f8a;
+$paragraph-color: #6084a4;
+$purple-color: #b0a6fe;
+$bg-color: #f7fafd;
+$bg-color2: #f9f6f6;
+$hosting-main-color: #032b8d;
+$gradient-color: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+$gradient-color2: linear-gradient(
+  to right bottom,
+  #1fa2ff,
+  #00c0ff,
+  #00d9f2,
+  #53eedd,
+  #a6ffcb
+);
+$transition: 0.5s;
+$font-size: 14px;
+
+.container {
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  float: left;
+}
+.side {
+  height: 100%;
+}
+.side ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.side ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 9px 15px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.side ul li:hover {
+  background-color: rgba(211, 211, 211, 0.356);
+}
+
+.side ul li .a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+.side ul li p {
+  margin-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(65, 65, 65);
+}

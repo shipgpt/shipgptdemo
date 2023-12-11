@@ -67,7 +67,7 @@ const UploadButton = () => {
       formData.append("file", event);
 
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_NEXT_IP_GENERIG}/api/ingest?openai_key=${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,
+        `${process.env.NEXT_PUBLIC_NEXT_IP_GENERIG}/api/file?openai_key=${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,
         formData,
         {
           headers: {

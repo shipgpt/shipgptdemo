@@ -86,18 +86,16 @@ const slice = createSlice({
     addPendingData: (state, action) => {
       const data = action.payload;
 
-      console.log("addPendingData", data);
+      console.log("addPendingData", data.data);
 
       state.messageState.pending =
-        (state.messageState.pending ?? "") + data?.response?.text;
+        (state.messageState.pending ?? "") + data.data;
       console.log(
         "state.messageState.responseMessage",
         state.messageState.pending
       );
       state.messageState.responseMessage =
-        (state.messageState.pending ?? "") + data?.response?.text;
-
-      state.messageState.pendingSourceDocs = data?.response?.sourceDocuments;
+        (state.messageState.pending ?? "") + data.data;
     },
 
     clearHistory: (state, action) => {

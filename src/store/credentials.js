@@ -101,7 +101,6 @@ const slice = createSlice({
       state.selectedUserFolders[Index] = folder_data;
     },
     getFolderData: (state, action) => {
-      console.log("getFolderData", action.payload.success);
       const folderResponse = action.payload?.folderResponse;
       const fileResponse = action.payload?.fileResponse;
       if (folderResponse) {

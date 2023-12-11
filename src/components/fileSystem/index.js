@@ -80,8 +80,6 @@ const FilesSidebar = () => {
     const result = await callFolderApi(folder);
 
     if (result?.status == 200) {
-      console.log("its working add");
-
       await updateFOlderInStorage({
         folder_id: result?.data?.success?.file?.name,
         folder_name: folder.folder_name,
@@ -112,7 +110,6 @@ const FilesSidebar = () => {
     const result = await callFolderApi(folder);
 
     if (result?.status == 200) {
-      console.log("its working remove");
       await removeAssignFromStorage({
         file_ids,
         dispatch,
@@ -136,7 +133,6 @@ const FilesSidebar = () => {
     setcheckedCount(0);
     setShow(null);
     setShow(folder.index);
-
     dispatch(hideLoader("assignFile"));
   };
 
@@ -404,7 +400,6 @@ const FileStructure = (props) => {
   };
 
   const handleShowCheck = ({ i, type }) => {
-    console.log("123");
     setSelectedFolder({
       folder_id: data.folder_id,
       folder_name: data.folder_name,

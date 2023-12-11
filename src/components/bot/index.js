@@ -15,6 +15,7 @@ import {
   clearPending,
   addPendingData,
   setStopChat,
+  addSourceDocs,
 } from "@/src/store/mainSlice";
 
 import {
@@ -95,8 +96,7 @@ export default function Bot() {
           body: JSON.stringify({
             question,
             history,
-            file_name: _id,
-            keyData: key_id,
+            file_id: _id,
             model: "gpt-3.5-turbo",
           }),
           signal: ctrl.signal,
@@ -107,8 +107,11 @@ export default function Bot() {
               handleResponse("true");
             } else {
               const data = JSON.parse(event.data);
-
-              dispatch(addPendingData(data));
+              if (data.sourceDocs) {
+                dispatch(addSourceDocs(data));
+              } else {
+                dispatch(addPendingData(data));
+              }
             }
           },
         }
